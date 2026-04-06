@@ -2,8 +2,7 @@ from tkinter import *
 
 window = Tk()
 
-window.title("My First GUI")
-window.minsize(width=500, height=300)
+window.title("Miles to KM Converter")
 window.config(padx=20, pady=20)
 
 def convert():
