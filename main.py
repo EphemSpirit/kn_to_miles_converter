@@ -1,16 +1,34 @@
-# This is a sample Python script.
+from tkinter import *
 
-# Press Ctrl+F5 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+window = Tk()
+
+window.title("My First GUI")
+window.minsize(width=500, height=300)
+window.config(padx=20, pady=20)
+
+def convert():
+    miles = int(num_entry.get())
+    km = miles * 1.6
+    res_label.config(text=km)
+
+num_entry = Entry()
+num_entry.grid(column=1, row=0)
+
+miles_label = Label(text="Miles")
+miles_label.grid(column=2, row=0)
+
+eq_label = Label(text="is equal to")
+eq_label.grid(column=0, row=1)
+
+res_label = Label(text="0")
+res_label.grid(column=1, row=1)
+
+km_label = Label(text="km")
+km_label.grid(column=2, row=1)
+
+calc_button = Button(text="Calculate", command=convert)
+calc_button.grid(column=1, row=2)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+window.mainloop()
