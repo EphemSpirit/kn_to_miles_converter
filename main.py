@@ -6,7 +6,7 @@ window.title("Miles to KM Converter")
 window.config(padx=20, pady=20)
 
 def convert():
-    initial_value = int(num_entry.get())
+    initial_value = float(num_entry.get())
     res = initial_value * 1.6 if radio_state.get() == 1 else initial_value / 1.6
     res_label.config(text=res)
 
