@@ -45,8 +45,5 @@ km_radio.grid(column=0, row=3)
 
 miles_radio.select()
 
-if radio_state.get() == 2:
-    from_label.config(text="KM")
-
 
 window.mainloop()
